@@ -1,0 +1,38 @@
+# eval only: Celeb-DF-v2 test list
+
+log_dir: ./logs/training/
+pretrained: ./training/pretrained/xception-b5690688.pth
+model_name: xception
+backbone_name: xception
+
+backbone_config:
+  mode: original
+  num_classes: 2
+  inc: 3
+  dropout: false
+
+all_dataset: [FaceForensics++, FF-F2F, FF-DF, FF-FS, FF-NT, FaceShifter, DeepFakeDetection, Celeb-DF-v1, Celeb-DF-v2, DFDCP, DFDC, DeeperForensics-1.0, UADFV]
+train_dataset: [FaceForensics++]
+test_dataset: [Celeb-DF-v2]
+
+compression: c23
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+frame_num: {'train': 4, 'test': 4}
+resolution: 224
+with_mask: false
+with_landmark: false
+
+use_data_augmentation: false
+
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+
+loss_func: cross_entropy
+losstype: null
+metric_scoring: auc
+
+manualSeed: 1024
+cuda: false
+cudnn: false

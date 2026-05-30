@@ -1,0 +1,28 @@
+{
+  "preds_file": "logs/calibration/ffdf_baseline_FF-DF.npz",
+  "dataset": "FF-DF",
+  "temperature": 6.574771404266357,
+  "caveat": "Temperature was fit on the same FF-DF evaluation split (post-hoc). AUC is unchanged by monotonic calibration; ECE/NLL are optimistic.",
+  "before": {
+    "n_samples": 32,
+    "auc": 0.79296875,
+    "nll": 0.805237880660287,
+    "ece": 0.2297299411147833,
+    "acc_at_0.5": 0.5,
+    "opt_threshold": 0.7363893985748291,
+    "balanced_acc_opt": 0.84375,
+    "acc_real_opt": 1.0,
+    "acc_fake_opt": 0.6875
+  },
+  "after": {
+    "n_samples": 32,
+    "auc": 0.79296875,
+    "nll": 0.6949281927002109,
+    "ece": 0.03773375041782856,
+    "acc_at_0.5": 0.5,
+    "opt_threshold": 0.5389823913574219,
+    "balanced_acc_opt": 0.84375,
+    "acc_real_opt": 1.0,
+    "acc_fake_opt": 0.6875
+  }
+}
